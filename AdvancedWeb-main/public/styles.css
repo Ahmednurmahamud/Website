@@ -1,0 +1,90 @@
+.directory-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.directory-column {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f4f4f4;
+}
+
+/* Rest of your styles */
+
+
+/* Rest of your styles remain the same */
+
+.entry h3 {
+    margin: 0;
+}
+
+.entry p {
+    margin: 0;
+}
+
+.alphabet-navigation {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.alphabet-navigation a {
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+}
+/*_______________________________________________________________________________________________*/
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.directory-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.directory-column {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.directory-column h3 {
+    margin: 0 0 10px 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}

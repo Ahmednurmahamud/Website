@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example2-deployment
+  namespace: jkpgcity
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: example2
+  template:
+    metadata:
+      labels:
+        app: example2
+    spec:
+      containers:
+      - name: example2
+        env:
+        - name: DB_HOST
+          value: "172.17.0.1"
+        image: localhost:5000/w2group4

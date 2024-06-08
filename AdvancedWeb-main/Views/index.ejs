@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory Listing</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+<form action="/" method="GET">
+    <select name="district" onchange="this.form.submit()">
+        <option value="">All Districts</option>
+        <% const uniqueDistricts = [...new Set(stores.map(store => store.district).filter(Boolean))]; %>
+        <% uniqueDistricts.sort().forEach(districtOption => { %>
+            <option value="<%= districtOption %>" <%= districtOption === selectedDistrict ? 'selected' : '' %>><%= districtOption %></option>
+        <% }); %>
+    </select>
+</form>
+
+<div class="directory-container">
+    <% stores.forEach(store => { %>
+        <div class="directory-column">
+            <div class="entry">
+                <h3><%= store.name %></h3>
+                <% if(store.url) { %>
+                    <a href="<%= store.url %>" target="_blank">More information</a>
+                <% } else { %>
+                    <p>No information available</p>
+                <% } %>
+                <p>District: <%= store.district || 'Not specified' %></p>
+                <!-- Edit link for each store -->
+                <a href="/edit/<%= store.id %>">Edit</a>
+            </div>
+        </div>
+    <% }); %>
+</div>
+
+</body>
+</html>

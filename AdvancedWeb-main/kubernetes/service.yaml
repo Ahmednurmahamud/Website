@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: example2-service
+  namespace: jkpgcity
+spec:
+  selector:
+    app: example2
+  ports:
+    - protocol: TCP
+      port: 3000
+      targetPort: 3000
